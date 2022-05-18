@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ai_project1.Controller">
+   <children>
+      <ImageView fitHeight="130.0" fitWidth="316.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../Omar/College/1212/ENCS3340/Project/bzu-footer-logo.png" />
+         </image>
+         <VBox.margin>
+            <Insets bottom="10.0" top="20.0" />
+         </VBox.margin>
+      </ImageView>
+      <SplitPane dividerPositions="0.4" prefHeight="400.0" prefWidth="900.0">
+         <items>
+            <VBox alignment="TOP_CENTER" minHeight="-Infinity" prefHeight="400.0" prefWidth="356.0">
+               <children>
+                  <Pane prefHeight="65.0" prefWidth="356.0" />
+                  <Label prefHeight="17.0" prefWidth="283.0" text="Choose the search algorithm">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="55.0" prefWidth="356.0" />
+                  <Button fx:id="BFS_button" mnemonicParsing="false" onAction="#onBFS" prefHeight="25.0" prefWidth="209.0" text="Breadth First Search" />
+                  <Pane prefHeight="40.0" />
+                  <Button fx:id="DFS_button" mnemonicParsing="false" onAction="#onDFS" prefHeight="25.0" prefWidth="209.0" text="Deabth First Search" />
+                  <Pane prefHeight="40.0" />
+                  <Button fx:id="aStar_button" mnemonicParsing="false" onAction="#onAStar" prefHeight="25.0" prefWidth="209.0" text="A* Search" />
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="356.0">
+                     <children>
+                        <RadioButton fx:id="rb1" mnemonicParsing="false" prefWidth="85.0" text="Walking">
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="rb2" mnemonicParsing="false" prefWidth="85.0" text="Driving" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Pane prefHeight="85.0" prefWidth="536.0" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="536.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" text="From:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="from" prefHeight="25.0" prefWidth="200.0">
+                           <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                 <String fx:id="Aka" fx:value="Aka" />
+                                 <String fx:id="Bethlehem" fx:value="Bethlehem" />
+                                 <String fx:id="Dura" fx:value="Dura" />
+                                 <String fx:id="Haifa" fx:value="Haifa" />
+                                 <String fx:id="Halhoul" fx:value="Halhoul" />
+                                 <String fx:id="Hebron" fx:value="Hebron" />
+                                 <String fx:id="Jenin" fx:value="Jenin" />
+                                 <String fx:id="Jericho" fx:value="Jericho" />
+                                 <String fx:id="Jerusalem" fx:value="Jerusalem" />
+                                 <String fx:id="Nablus" fx:value="Nablus" />
+                                 <String fx:id="Nazareth" fx:value="Nazareth" />
+                                 <String fx:id="Qalqilya" fx:value="Qalqilya" />
+                                 <String fx:id="Ramallah" fx:value="Ramallah" />
+                                 <String fx:id="Ramleh" fx:value="Ramleh" />
+                                 <String fx:id="Sabastia" fx:value="Sabastia" />
+                                 <String fx:id="Safad" fx:value="Safad" />
+                                 <String fx:id="Salfit" fx:value="Salfit" />
+                                 <String fx:id="Tubas" fx:value="Tubas" />
+                                 <String fx:id="Tulkarm" fx:value="Tulkarm" />
+                                 <String fx:id="Yafa" fx:value="Yafa" />
+                              </FXCollections>
+                           </items>
+                        </ComboBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="65.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="27.0" prefWidth="150.0" text="To:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="to" prefHeight="25.0" prefWidth="200.0">
+                           <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                 <String fx:id="Aka1" fx:value="Aka" />
+                                 <String fx:id="Bethlehem1" fx:value="Bethlehem" />
+                                 <String fx:id="Dura1" fx:value="Dura" />
+                                 <String fx:id="Haifa1" fx:value="Haifa" />
+                                 <String fx:id="Halhoul1" fx:value="Halhoul" />
+                                 <String fx:id="Hebron1" fx:value="Hebron" />
+                                 <String fx:id="Jenin1" fx:value="Jenin" />
+                                 <String fx:id="Jericho1" fx:value="Jericho" />
+                                 <String fx:id="Jerusalem1" fx:value="Jerusalem" />
+                                 <String fx:id="Nablus1" fx:value="Nablus" />
+                                 <String fx:id="Nazareth1" fx:value="Nazareth" />
+                                 <String fx:id="Qalqilya1" fx:value="Qalqilya" />
+                                 <String fx:id="Ramallah1" fx:value="Ramallah" />
+                                 <String fx:id="Ramleh1" fx:value="Ramleh" />
+                                 <String fx:id="Sabastia1" fx:value="Sabastia" />
+                                 <String fx:id="Safad1" fx:value="Safad" />
+                                 <String fx:id="Salfit1" fx:value="Salfit" />
+                                 <String fx:id="Tubas1" fx:value="Tubas" />
+                                 <String fx:id="Tulkarm1" fx:value="Tulkarm" />
+                                 <String fx:id="Yafa1" fx:value="Yafa" />
+                              </FXCollections>
+                           </items>
+                        </ComboBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <Pane prefHeight="30.0" prefWidth="536.0" />
+                  <Label prefHeight="27.0" text="Calculated path:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Text fx:id="path" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Presented by:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" top="10.0" />
+         </VBox.margin>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Hamza Aldabe-1190508">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="Omar Odeh-1190510">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets bottom="15.0" />
+         </VBox.margin>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
